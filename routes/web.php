@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/posts/{post:slug}', [PostController::class, 'show'])->name('post.show');
+
+Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');

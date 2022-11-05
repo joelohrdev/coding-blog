@@ -6,7 +6,7 @@
                 <div class="flex items-center space-x-4">
                     <time class="text-sm text-gray-500">{{ $post->created_at->format('F d, Y') }}</time>
                     @foreach($post->categories as $category)
-                        <span class="normal-case inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">{{ $category->name }}</span>
+                        <a href="{{ route('category.show', $category) }}" class="normal-case inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">{{ $category->name }}</a>
                     @endforeach
                 </div>
             </div>
