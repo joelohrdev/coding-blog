@@ -10,7 +10,7 @@ class ShowPosts extends Component
     public function render()
     {
         return view('livewire.show-posts', [
-            'posts' => Post::orderby('title')->get()
+            'posts' => Post::with('categories')->orderby('title')->get()
         ]);
     }
 }
