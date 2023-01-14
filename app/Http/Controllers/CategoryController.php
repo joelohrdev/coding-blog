@@ -8,6 +8,6 @@ class CategoryController extends Controller
 {
     public function show(Category $category)
     {
-        return view('category', compact('category'));
+        return view('blog.category', compact('category'));
     }
 }
