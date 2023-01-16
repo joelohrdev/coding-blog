@@ -10,7 +10,7 @@ class Snippets extends Component
     public function render()
     {
         return view('livewire.snippets', [
-            'posts' => Post::where('category',  'snippet')->get()
+            'posts' => Post::where('category', 'snippet')->get(),
         ]);
     }
 }

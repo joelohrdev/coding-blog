@@ -2,18 +2,16 @@
 
 namespace App\Filament\Resources;
 
-use Spatie\FilamentMarkdownEditor\MarkdownEditor;
 use App\Filament\Resources\PostResource\Pages;
-use Closure;
 use App\Models\Post;
+use Closure;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
+use Spatie\FilamentMarkdownEditor\MarkdownEditor;
 
 class PostResource extends Resource
 {
@@ -42,7 +40,7 @@ class PostResource extends Resource
                     ->required(),
                 Forms\Components\Select::make('categories')
                     ->multiple()
-                    ->relationship('categories', 'name')
+                    ->relationship('categories', 'name'),
             ]);
     }
 
